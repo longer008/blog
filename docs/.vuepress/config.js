@@ -9,13 +9,23 @@ module.exports = {
     lineNumbers: false // 代码块显示行号
   },
   themeConfig: {
+	// 你的GitHub仓库，请正确填写
+    repo: 'https://github.com/longer008/blog',
+	// 自定义仓库链接文字。
+    repoLabel: 'GitHub',
     nav:[ // 导航栏配置
-      {text: '前端基础', link: '/accumulate/' },
-      {text: '算法题库', link: '/algorithm/'},
-      {text: '百度', link: 'https://baidu.com'},
-	{ text: 'FirstBlog', link: '/blog/README.md' }      
+	  {text:'Home',link:'/'},
+	  {text:'工具箱',link:'/blog/tools/FirstBlog.md'},
+      {text: '前端', link: '/blog/fontend/fontend1.md' },
+      {text: '后端', link: '/blog/backend/backend1.md'},
+      {text: '百度', link: 'https://baidu.com'}      
     ],
-    sidebar: 'auto', // 侧边栏配置
+	// 侧边栏配置
+    sidebar: [
+		['/','首页'],
+		['/blog/tools/VuePress.md','我的第一篇博客']
+	], 
     sidebarDepth: 2, // 侧边栏显示2级
+	
   }
 }
